@@ -1,0 +1,95 @@
+.wine-video {
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  background: url(../img/wine-video-image.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.wine-video__title {
+  font-size: 55px;
+  line-height: 70px;
+}
+
+.wine-video__description {
+  font-size: 16px;
+  line-height: 25.6px;
+  color: var(--text-light-gray-color);
+}
+
+.wine-video__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 700;
+  color: var(--white-color);
+  margin-top: 35px;
+}
+
+.wine-video__link:hover {
+  text-decoration: underline;
+}
+
+.wine-video__play-svg svg {
+  width: 50px;
+  height: auto;
+  color: var(--primary-orange-color);
+}
+
+.wine-video__play {
+  margin-top: 50px;
+}
+
+.wine-video__play-svg p {
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .wine-video {
+    padding: 132px 0;
+  }
+
+  .wine-video__title {
+    font-size: 68px;
+    line-height: 85px;
+  }
+
+  .wine-video__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wine-video__header {
+    max-width: 400px;
+  }
+
+  .wine-video__header,
+  .wine-video__play {
+    width: 49%;
+  }
+
+  .wine-video__play-svg svg {
+    width: 70px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .wine-video {
+    padding: 165px 0;
+  }
+
+  .wine-video__title {
+    font-size: 80px;
+    line-height: 100px;
+  }
+}
