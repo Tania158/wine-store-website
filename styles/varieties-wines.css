@@ -1,0 +1,50 @@
+.varieties {
+  width: 100%;
+  height: auto;
+  padding: 90px 0;
+  background: url(../img/varieties-wine-image.jpeg) no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.varieties__main-content {
+  margin-top: 25px;
+  padding: 33px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.varieties__list-wines {
+  margin-top: 20px;
+}
+
+.varieties__item-wine span {
+  color: var(--primary-orange-color);
+}
+
+@media (min-width: 768px) {
+  .varieties {
+    padding: 100px 0;
+    background-position: center;
+  }
+
+  .varieties__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .varieties__main {
+    width: 50%;
+  }
+
+  .varieties__title {
+    width: 85%;
+  }
+}
+
+@media (min-width: 992px) {
+  .varieties {
+    padding: 110px 0;
+  }
+}

@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Prata&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+/* Reset css*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--main-text-dark-color);
+  font-family: 'Rubik', sans-serif !important;
+  background-color: var(--primary-brown-color);;
+}
+
+input,
+button,
+textarea {
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+dl,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+a {
+  display: inline-block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Prata', serif;
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.70px;
+  line-height: 44px;
+  color: var(--white-color);
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.44px;
+  line-height: 33px;
+  color: var(--white-color);
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 24px;
+  margin: auto;
+}
+
+.subtitle {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  line-height: 40px;
+  color: var(--primary-orange-color);
+  margin-top: 20px;
+}
+
+.illustration img {
+  max-height: 42px;
+  width: auto;
+  padding-top: 10px;
+  margin-top: 25px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-top: 20px;
+  color: var(--white-color);
+}
+
+.text {
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  line-height: 25.6px;
+  letter-spacing: .5px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.button-primary,
+.button-secondary {
+  font-size: 16.5px;
+  line-height: 16.5px;
+  font-weight: 700;
+  color: var(--white-color);
+  max-width: 150px;
+  text-align: center;
+}
+
+.button-primary {
+  background-color: var(--primary-orange-color);
+  padding: 18px 26px;
+  min-width: 132px;
+}
+
+.button-primary:hover {
+  background-color: var(--btn-hover-shadow);
+  transition-duration: 2s;
+}
+
+.button-secondary {
+  border: 1.5px solid var(--white-color);
+  padding: 16.5px 26px;
+  min-width: 149px;
+}
+
+.button-secondary:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  transition-duration: 1s;
+}
+
+.divider {
+  height: 2px;
+  width: 15%;
+  background-color: var(--primary-orange-color);
+  margin: 15px 0;
+}
+
+.wine-name,
+.wine-price {
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--white-color);
+  text-align: center;
+}
+
+.wine-name {
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+.wine-price {
+  margin: 0 8px;
+  font-weight: 700;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--main-text-dark-color);
+  background-color: black;
+  border-radius: 50%;
+  height: 27px;
+  width: 27px;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 15px;
+}
+
+.swiper-button-prev:after {
+  margin-left: -2px;
+}
+
+.swiper-button-next:after {
+  margin-right: -2px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 8px;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--white-color);
+  opacity: .25;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--white-color);
+  opacity: .75;
+}
+
+@media (max-width: 480px) {
+  .divider {
+    min-width: 3%;
+  }
+}
+
+@media (min-width: 640px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    height: 32px;
+    width: 32px;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 41px;
+    letter-spacing: -0.82px;
+    line-height: 53px;
+  }
+}
+
+@media (min-width: 992px) {
+  h2 {
+    font-size: 48px;
+    letter-spacing: -0.96px;
+    line-height: 62px;
+  }
+}
+
+:root {
+  --main-text-dark-color: #898082;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --primary-orange-color: #c8693a;
+  --btn-hover-shadow: #af572b;
+  --primary-brown-color: #261e1c;
+  --dark-brown-color: #1a1512;
+  --background-header: #00000080;
+  --background-discovery-wine: #342e2e8f;
+
+  --header-heigth: 105px
+}

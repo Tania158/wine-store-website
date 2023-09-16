@@ -1,0 +1,43 @@
+.best-deals {
+  width: 100%;
+  height: auto;
+  padding: 90px 0 50px;
+}
+
+.best-deals__header {
+  text-align: center;
+}
+
+.best-deals__image {
+  margin: auto;
+}
+
+.best-deals__swiper {
+  margin-top: 45px;
+}
+
+.swiper__slide-wine {
+  padding: 0 15px 20px 15px;
+}
+
+.slide-wine__button {
+  display: block;
+  margin: 25px auto;
+  padding: 15.5px 26px;
+}
+
+@media (min-width: 768px) {
+  .best-deals {
+    padding: 100px 0 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .best-deals {
+    padding: 110px 0 50px;
+  }
+
+  .best-deals__swiper {
+    margin-top: 50px;
+  }
+}

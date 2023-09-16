@@ -1,0 +1,122 @@
+/* Products options section */
+
+.product-options {
+  width: 100%;
+  height: auto;
+  padding: 90px 0 60px;
+}
+
+.product-options__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
+}
+
+.product-options__item-background {
+  padding: 35px;
+}
+
+.product-options__item-background.wine-cheese {
+  grid-area: 1 / 1 / 2 / 2;
+  background: url(../img/options-wine-cheese.jpeg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
+}
+
+.product-options__item-background.glasses {
+  grid-area: 2 / 1 / 3 / 2;
+  background: url(../img/options-glasses.jpeg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
+}
+
+.product-options__item-background.wine-grape {
+  grid-area: 3 / 1 / 4 / 2;
+  background: url(../img/options-wine-grape.jpeg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
+}
+
+.product-options__item-content {
+  min-height: 340px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.product-options__title {
+  margin-top: 25px;
+}
+
+.product-options__link-container {
+  max-width: 120px;
+  margin-top: 26px;
+}
+
+.product-options__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 700;
+  color: var(--white-color);
+}
+
+@media (min-width: 650px) {
+  .product-options__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  .product-options__item-background.wine-cheese {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .product-options__item-background.glasses {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  .product-options__item-background.wine-grape {
+    justify-self: center;
+    align-self: stretch;
+    grid-area: 2 / 1 / 3 / 3;
+    width: calc(50% - 20px / 2);
+  }
+}
+
+@media (min-width: 768px) {
+  .product-options {
+    padding: 105px 0 60px;
+  }
+
+  .product-options__item-background {
+    padding: 38px;
+  }
+}
+
+@media (min-width: 992px) {
+  .product-options {
+    padding: 120px 0 60px;
+  }
+
+  .product-options__item-background {
+    padding: 45px;
+  }
+
+  .product-options__item-content {
+    min-height: 400px;
+  }
+
+  .product-options__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0;
+  }
+
+  .product-options__item-background.wine-grape {
+    grid-area: 1 / 3 / 2 / 4;
+    width: auto;
+  }
+
+}

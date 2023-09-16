@@ -1,0 +1,52 @@
+.history {
+  width: 100%;
+  height: auto;
+  padding: 60px 0 90px;
+}
+
+.history__wine-chronology {
+  margin-top: 45px;
+}
+
+.history__wine-chronology {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 50px 0px;
+}
+
+.history__date-event {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 23px;
+  color: var(--primary-orange-color);
+}
+
+@media (min-width: 768px) {
+  .history {
+    padding: 60px 0 105px;
+  }
+
+  .history__wine-chronology {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .history {
+    padding: 60px 0 120px;
+  }
+
+  .history__wine-chronology {
+    margin-top: 50px;
+  }
+
+  .history__wine-chronology {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 30px;
+  }
+}
