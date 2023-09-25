@@ -1,5 +1,5 @@
 (() => {
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper(".swiper-wine", {
     loop: true,
     speed: 400,
     spaceBetween: 100,
@@ -26,6 +26,22 @@
       el: ".swiper-pagination",
     },
 
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+})();
+
+(() => {
+  const swiper = new Swiper(".swiper-testimonials", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

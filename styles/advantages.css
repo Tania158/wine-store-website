@@ -1,0 +1,18 @@
+.advantages {
+  width: 100%;
+  height: auto;
+  padding: 50px 0 90px;
+}
+
+@media (min-width: 768px) {
+  .advantages {
+    padding: 50px 0 105px;
+  }
+}
+
+@media (min-width: 992px) {
+  .advantages {
+    padding: 50px 0 120px;
+  }
+
+}

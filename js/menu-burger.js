@@ -1,7 +1,6 @@
 (() => {
   const openMenuBtn = document.querySelector(".header__burger-menu");
   const mobileMenu = document.querySelector(".header__menu");
-  console.log(openMenuBtn);
   openMenuBtn.addEventListener("click", function (e) {
     document.body.classList.toggle("scroll-lock");
     openMenuBtn.classList.toggle("active");
