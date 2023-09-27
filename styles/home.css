@@ -5,7 +5,7 @@
   background: url(../img/header-background.jpeg) no-repeat;
   background-size: cover;
   background-position: left;
-  background-attachment: fixed;
+  background-attachment: scroll;
   margin-top: -105px;
 }
 
@@ -37,6 +37,10 @@
 }
 
 @media (min-width: 450px) {
+  .home {
+    background-attachment: fixed;
+  }
+
   .home__container {
     display: flex;
     height: 80vh;
