@@ -4,7 +4,7 @@
   background: url(../img/discover-wines-image.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .discover-wines__background {
@@ -39,6 +39,12 @@
 
 .discover-wines__btn.button-primary{
   padding: 15.5px 26px;
+}
+
+@media (min-width: 450px) {
+  .discover-wines {
+    background-attachment: fixed;
+  }
 }
 
 @media (min-width: 768px) {

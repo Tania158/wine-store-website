@@ -5,7 +5,7 @@
   background: url(../img/wine-video-image.png) no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .wine-video__title {
@@ -50,6 +50,12 @@
   font-weight: 700;
   line-height: 22px;
   margin-top: 20px;
+}
+
+@media (min-width: 450px) {
+  .wine-video {
+    background-attachment: fixed;
+  }
 }
 
 @media (min-width: 768px) {
