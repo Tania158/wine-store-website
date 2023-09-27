@@ -1,15 +1,76 @@
+.basket {
+  display: none;
+}
+
+.active-basket {
+  width: 70px;
+  height: 70px;
+  background: var(--white-color);
+  border-radius: 50%;
+  position: fixed;
+  top: 80px;
+  right: 35px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.basket__total-count {
+  background-color: #c8693a;
+  color: #fff;
+  top: -2px;
+  right: -2px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.basket svg {
+  stroke: var(--black-color);
+  width: 33px;
+  height: auto;
+}
+
+.shopping-card {
+  display: none;
+}
+
+.active-cart {
+  display: block;
+  background: rgba(0, 0, 0, .7);
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  z-index: 1003;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .shopping-card__container {
   max-width: 450px;
   padding: 0 15px;
-  margin: auto;
+  margin: 15px auto;
+  background: var(--white-color);
+}
+
+.shopping-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shopping-card__button {
+
 }
 
 .shopping-card__title {
   color: var(--black-color);
-}
-
-.shopping-card {
-  background: var(--white-color);
 }
 
 .shopping-cart__list {

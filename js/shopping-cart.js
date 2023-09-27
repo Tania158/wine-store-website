@@ -1,4 +1,10 @@
 const addToCartBtn = document.querySelectorAll("#add-to-cart");
+const basketBtn = document.querySelector(".basket");
+const shoppingCart = document.querySelector("#shopping-card");
+
+basketBtn.addEventListener("click", () => {
+  shoppingCart.classList.add("active-cart");
+});
 
 addToCartBtn.forEach((button) => {
   button.addEventListener("click", () => {
@@ -36,6 +42,55 @@ function addToCart(product) {
   displayCart();
 }
 
+function displayCart() {
+  const cartList = document.getElementById("cart");
+  const totalElement = document.getElementById("total");
+  const totalCount = document.querySelector(".basket__total-count");
+
+  if (cart.length > 0) {
+    basketBtn.classList.add("active-basket");
+  } else {
+    if (basketBtn.classList.contains("active-basket")) {
+      basketBtn.classList.remove("active-basket");
+    }
+  }
+
+  cartList.innerHTML = "";
+
+  let total = 0;
+  let count = 0;
+
+  cart.forEach((product) => {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `<div class="shopping-cart__item">
+              <div class="shopping-cart__img-container">
+                <img style="width: 46px;" src="${product.image}" alt="${
+      product.name
+    }">
+              </div>
+              <p class="shopping-cart__name text">${product.name}</p>
+              <input type="number" class="shopping-cart__counter" min="1" value="${
+                product.quantity
+              }">
+              <div class="shopping-cart__amount">${
+                product.price * product.quantity
+              } USD</div>
+              <button class="shopping-cart__remove">
+                <svg width="14" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2h3.6c.2 0 .4.2.4.4v1.2c0 .2-.2.4-.4.4H.4C.2 4 0 3.9 0 3.6V2.4c0-.2.2-.4.4-.3h3.7V2L4.9.3c.1-.2.2-.3.4-.3h3.5c.1 0 .3.1.4.2l.8 1.7V2zM1.8 16.1c.1 1 1 1.9 2 1.9h6.3c1.1 0 1.9-.8 2-1.9l1-11.1H1l.8 11.1zM12 6l-.8 10.1c0 .5-.5.9-1 .9H3.8c-.5 0-1-.4-1-.9L2 6h10zM5 8.1h1v6H5v-6zm4 0H8v6h1v-6z" fill="#9199AB"></path></svg>
+              </button>
+            </div>`;
+    cartList.appendChild(listItem);
+
+    total += product.price * product.quantity;
+    count += product.quantity;
+  });
+
+  totalElement.innerHTML = `Total amount: ${total.toFixed(2)}`;
+  totalCount.textContent = count;
+
+  getCardItems();
+}
+
 function removeFromCart(productName) {
   const index = cart.findIndex((item) => item.name === productName);
 
@@ -69,43 +124,6 @@ function updateCartItem(productName, quantity) {
 function getItemQuantity(productName) {
   const cartItem = cart.find((item) => item.name === productName);
   return cartItem ? cartItem.quantity : 1;
-}
-
-function displayCart() {
-  const cartList = document.getElementById("cart");
-  const totalElement = document.getElementById("total");
-
-  cartList.innerHTML = "";
-
-  let total = 0;
-
-  cart.forEach((product) => {
-    const listItem = document.createElement("li");
-    listItem.innerHTML = `<div class="shopping-cart__item">
-              <div class="shopping-cart__img-container">
-                <img style="width: 46px;" src="${product.image}" alt="${
-      product.name
-    }">
-              </div>
-              <p class="shopping-cart__name text">${product.name}</p>
-              <input type="number" class="shopping-cart__counter" min="1" value="${
-                product.quantity
-              }">
-              <div class="shopping-cart__amount">${
-                product.price * product.quantity
-              } USD</div>
-              <button class="shopping-cart__remove">
-                <svg width="14" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2h3.6c.2 0 .4.2.4.4v1.2c0 .2-.2.4-.4.4H.4C.2 4 0 3.9 0 3.6V2.4c0-.2.2-.4.4-.3h3.7V2L4.9.3c.1-.2.2-.3.4-.3h3.5c.1 0 .3.1.4.2l.8 1.7V2zM1.8 16.1c.1 1 1 1.9 2 1.9h6.3c1.1 0 1.9-.8 2-1.9l1-11.1H1l.8 11.1zM12 6l-.8 10.1c0 .5-.5.9-1 .9H3.8c-.5 0-1-.4-1-.9L2 6h10zM5 8.1h1v6H5v-6zm4 0H8v6h1v-6z" fill="#9199AB"></path></svg>
-              </button>
-            </div>`;
-    cartList.appendChild(listItem);
-
-    total += product.price * product.quantity;
-  });
-
-  totalElement.innerHTML = `Total amount: ${total.toFixed(2)}`;
-
-  getCardItems();
 }
 
 function getCardItems() {
