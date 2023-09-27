@@ -6,9 +6,6 @@
 
 .history__wine-chronology {
   margin-top: 45px;
-}
-
-.history__wine-chronology {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -42,9 +39,6 @@
 
   .history__wine-chronology {
     margin-top: 50px;
-  }
-
-  .history__wine-chronology {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0 30px;

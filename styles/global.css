@@ -128,6 +128,38 @@ h3 {
   margin: auto;
 }
 
+.social-icons__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons__link {
+  width: 26px;
+  height: 26px;
+}
+
+.social-icons__link svg {
+  fill: var(--primary-orange-color);
+}
+
+a svg:hover {
+  fill: var(--black-color);
+}
+
+.outer {
+  fill: var(--black-color);
+}
+
+a .outer:hover {
+  fill: var(--primary-orange-color);
+}
+
+a path:hover {
+  fill: var(--primary-orange-color);
+}
+
 .subtitle {
   font-family: 'Great Vibes', cursive;
   font-size: 28px;
@@ -316,7 +348,9 @@ h3 {
   --dark-brown-color: #1a1512;
   --background-header: #00000080;
   --background-discovery-wine: #342e2e8f;
+  --background-advantage-icon: #342e2e;
   --text-light-gray-color: #f2efe9;
+  --input-background-color: #4949493d;
 
   --header-heigth: 105px
 }

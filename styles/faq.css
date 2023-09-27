@@ -23,6 +23,12 @@
   padding: 0 15px;
 }
 
+.faq__image-wine {
+  max-height: 800px;
+  width: auto;
+  margin: auto;
+}
+
 .accordion__container {
   position: relative;
   width: 100%;
@@ -122,5 +128,11 @@
   .faq__image-container {
     max-width: 40%;
     width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .faq__image-container {
+    max-width: 42%;
   }
 }

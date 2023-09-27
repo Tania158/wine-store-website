@@ -29,38 +29,6 @@
   color: var(--primary-orange-color);
 }
 
-.social-icons__list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.social-icons__link {
-  width: 26px;
-  height: 26px;
-}
-
-.social-icons__link svg {
-  fill: var(--primary-orange-color);
-}
-
-a svg:hover {
-  fill: var(--black-color);
-}
-
-.outer {
-  fill: var(--black-color);
-}
-
-a .outer:hover {
-  fill: var(--primary-orange-color);
-}
-
-a path:hover {
-  fill: var(--primary-orange-color);
-}
-
 @media (max-width: 991px) {
   .header__burger-menu {
     z-index: 100;
