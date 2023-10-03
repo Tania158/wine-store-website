@@ -1496,17 +1496,38 @@
       <div class="basket__total-count"></div>
       <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg_2UK ui-cart-icon-color--light_3Gm"><path d="M1 10C1 8.89543 1.89543 8 3 8H21C22.1046 8 23 8.89543 23 10V25C23 27.2091 21.2091 29 19 29H5C2.79086 29 1 27.2091 1 25V10Z" stroke-width="2"></path><path d="M17 12V6C17 3.23858 14.7614 1 12 1V1C9.23858 1 7 3.23858 7 6V12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
     </button>
-    <section id="shopping-card" class="shopping-card">
-      <div class="shopping-card__container">
-        <div class="shopping-card__header">
-          <h3 class="shopping-card__title">Shopping Card</h3>
-          <button class="shopping-card__button">+</button>
+    <section id="shopping-cart" class="shopping-cart">
+      <div class="shopping-cart__container">
+        <div class="shopping-cart__header">
+          <h3 class="shopping-cart__title">Shopping Cart</h3>
+          <button class="shopping-cart__button-close"><span></span></button>
         </div>
         <div>
-          <p>Products</p>
-          <ul id="cart" class="shopping-cart__list"></ul>
-          <div id="total" class="shopping-cart__total-amount"></div>
+          <div class="shopping-cart__backet">
+            <p class="shopping-cart__subtitle">Products</p>
+            <ul id="cart" class="shopping-cart__list"></ul>
+            <div id="total" class="shopping-cart__total-amount"></div>
+          </div>
+          <div class="shopping-cart__form-container">
+            <form action="" method="post" class="shopping-cart__form">
+              <label for="first-name">Name <span>*</span>
+                <input id="first-name" name="first-name" type="text" placeholder="Your first name" required />
+              </label>
+              <label for="phone">Phone <span>*</span>
+                <input id="phone" name="phone" type="phone" placeholder="Your phone" required />
+              </label>
+              <label for="email">Email <span>*</span>
+                <input id="email" name="email" type="email" placeholder="Your email" required />
+              </label>
+              <label for="bio">Comment:
+              <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Your comment"></textarea>
+              <div class="shopping-cart__form-btn">
+                <button type="submit" class="button-primary">Order</button>
+              </div>
+            </form>
+          </div>
         </div>
+        <div></div>
       </div>
     </section>
 

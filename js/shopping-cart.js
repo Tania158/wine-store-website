@@ -1,9 +1,13 @@
 const addToCartBtn = document.querySelectorAll("#add-to-cart");
 const basketBtn = document.querySelector(".basket");
-const shoppingCart = document.querySelector("#shopping-card");
+const shoppingCartModal = document.querySelector("#shopping-cart");
+const closeModalBtn = document.querySelector(".shopping-cart__button-close");
 
 basketBtn.addEventListener("click", () => {
-  shoppingCart.classList.add("active-cart");
+  shoppingCartModal.classList.add("active-cart");
+});
+closeModalBtn.addEventListener("click", () => {
+  shoppingCartModal.classList.remove("active-cart");
 });
 
 addToCartBtn.forEach((button) => {
@@ -72,9 +76,9 @@ function displayCart() {
               <input type="number" class="shopping-cart__counter" min="1" value="${
                 product.quantity
               }">
-              <div class="shopping-cart__amount">${
+              <div class="shopping-cart__amount">${(
                 product.price * product.quantity
-              } USD</div>
+              ).toFixed(2)} USD</div>
               <button class="shopping-cart__remove">
                 <svg width="14" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2h3.6c.2 0 .4.2.4.4v1.2c0 .2-.2.4-.4.4H.4C.2 4 0 3.9 0 3.6V2.4c0-.2.2-.4.4-.3h3.7V2L4.9.3c.1-.2.2-.3.4-.3h3.5c.1 0 .3.1.4.2l.8 1.7V2zM1.8 16.1c.1 1 1 1.9 2 1.9h6.3c1.1 0 1.9-.8 2-1.9l1-11.1H1l.8 11.1zM12 6l-.8 10.1c0 .5-.5.9-1 .9H3.8c-.5 0-1-.4-1-.9L2 6h10zM5 8.1h1v6H5v-6zm4 0H8v6h1v-6z" fill="#9199AB"></path></svg>
               </button>
@@ -85,7 +89,7 @@ function displayCart() {
     count += product.quantity;
   });
 
-  totalElement.innerHTML = `Total amount: ${total.toFixed(2)}`;
+  totalElement.innerHTML = `Total amount: ${total.toFixed(2)} USD`;
   totalCount.textContent = count;
 
   getCardItems();
