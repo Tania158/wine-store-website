@@ -72,10 +72,12 @@ function displayCart() {
       product.name
     }">
               </div>
-              <p class="shopping-cart__name text">${product.name}</p>
-              <input type="number" class="shopping-cart__counter" min="1" value="${
-                product.quantity
-              }">
+              <div class="shopping-cart__options">
+                <p class="shopping-cart__name text">${product.name}</p>
+                <input type="number" class="shopping-cart__counter" min="1" value="${
+                  product.quantity
+                }">
+              </div>
               <div class="shopping-cart__amount">${(
                 product.price * product.quantity
               ).toFixed(2)} USD</div>
